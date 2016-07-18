@@ -1,6 +1,8 @@
-angular.module('routerApp').controller('mainCtrl',function($scope){
+angular.module('routerApp').controller('mainCtrl',function($scope,$stateParams,$locations,myService){
 
-    $scope.test = 'Hello From Home Page';
+  var id = $stateParams;
+
+  mainService.getRecentProject(id);
 
 
 
